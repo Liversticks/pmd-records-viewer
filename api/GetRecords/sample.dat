@@ -1,3 +1,19 @@
 {
-    "name": "Azure"
+    "body": [
+        {
+            "Title": "Pokemon Mystery Dungeon: Blue Rescue Team",
+            "Categories": [
+                {
+                    "Name": "Any% No WM, No QS",
+                    "Runs": [
+                        {
+                            "Platform": "Wii U Virtual Console",
+                            "Language": "ENG"
+                        }
+                    ]
+                }
+            ]
+
+        }
+    ]
 }
