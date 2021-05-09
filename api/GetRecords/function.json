@@ -11,6 +11,15 @@
       "route": "records"
     },
     {
+      "name": "records",
+      "type": "cosmosDB",
+      "databaseName": "Shared-Free",
+      "collectionName": "V1-pmdboard",
+      "connectionStringSetting": "CosmosDBConnection",
+      "direction": "in",
+      "sqlQuery": "SELECT c.Game, c.Category, c.Platform, c.Language, c.Version, c.Runner, c.RunDate, c.RunTime, c.SRCLink FROM c WHERE c.id LIKE \"run%QueryWildcard%\""
+    },
+    {
       "type": "http",
       "direction": "out",
       "name": "res"
