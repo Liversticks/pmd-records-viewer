@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import useFetch from 'use-http';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const { loading, error, data = [] } = useFetch('/api/records', {}, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {error && <div>Error: {error.message}</div>}
+      {loading && <div>Loading...</div>}
+      { data.length > 0 && data.map((e) => <p>{e}</p>) }
     </div>
   );
 }
