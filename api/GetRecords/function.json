@@ -17,7 +17,7 @@
       "collectionName": "V1-pmdboard",
       "connectionStringSetting": "CosmosDBConnection",
       "direction": "in",
-      "sqlQuery": "SELECT c.Game, c.Category, c.Platform, c.Language, c.Version, c.Runner, c.RunDate, c.RunTime, c.SRCLink FROM c WHERE c.id LIKE \"run%QueryWildcard%\""
+      "sqlQuery": "SELECT c.Title, c.Categories FROM c WHERE c.id LIKE \"gameinfo%QueryWildcard%\""
     },
     {
       "type": "http",
