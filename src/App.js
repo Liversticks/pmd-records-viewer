@@ -1,5 +1,7 @@
 import React from 'react';
 import useFetch from 'use-http';
+// import PropTypes from 'prop-types';
+import Header from './Components/Header';
 import Footer from './Components/Footer';
 // import logo from './logo.svg';
 import './App.css';
@@ -9,6 +11,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {error && <div>Error: {error.message}</div>}
       {loading && <div>Loading...</div>}
       { data.length > 0 && data.map((e) => <p>{e.Title}</p>) }
