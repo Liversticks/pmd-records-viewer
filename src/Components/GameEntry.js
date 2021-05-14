@@ -2,6 +2,7 @@ import React from 'react';
 
 function GameEntry() {
   const schema = {
+    id: 'gameinfo-BRT',
     Title: 'Pokemon Mystery Dungeon: Blue Rescue Team',
     Categories: [],
   };
@@ -9,7 +10,9 @@ function GameEntry() {
   return (
     <div>
       <h2>{schema.Title}</h2>
-      { schema.Categories.map()}
+      { schema.Categories.map((x) => (
+        <h3>{x.Name}</h3>
+      ))}
     </div>
   );
 }
