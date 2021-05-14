@@ -1,18 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import GameNavLink from './GameNavLink';
 
-function Header() {
+function Header({ gameList = [] }) {
   return (
     <header>
-      <div className="main" />
+      <span id="siteTitle">PMD Records Viewer</span>
       <nav>
-        { ['BRT', 'RRT'].map((shortName) => (
-          <div>
-            {shortName}
-          </div>
+        { gameList.map((sn) => (
+          <GameNavLink shortName={sn} />
         ))}
       </nav>
     </header>
   );
 }
+
+Header.propTypes = {
+  gameList: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Header;
