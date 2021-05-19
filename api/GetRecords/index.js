@@ -1,11 +1,8 @@
 /* eslint-disable */
 
-module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+module.exports = async function (context, req, records) {
+    context.log('Querying all records!');
     context.res = {
-        body: [
-            "first",
-            "second"
-        ]
+        body: records
     };
 }
