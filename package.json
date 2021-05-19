@@ -16,9 +16,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "swa start ./build --api ./api",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev-build": "react-scripts build && swa start ./build --api ./api"
   },
   "eslintConfig": {
     "extends": [
